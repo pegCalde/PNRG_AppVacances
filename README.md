@@ -8,7 +8,10 @@ Raoua Messai
 Guillaume Savin
 
 ## CdC
-Application sous xamarin en c#/xaml
+Application sous xamarin en c#/xaml  
+Nécessite l'utilisation :
+* d'un serveur
+* d'une base de données
 ...
 
 ## Découpage des tâches
@@ -25,6 +28,7 @@ Application sous xamarin en c#/xaml
 
 ### Présentation et recherches utiles au projet
 
+* PowerPoint présentation projet
 * ...
 
 ## Maquette
