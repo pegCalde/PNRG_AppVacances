@@ -11,7 +11,7 @@ Guillaume Savin
 Application sous xamarin en c#/xaml  
 Nécessite l'utilisation :
 * d'un serveur
-* d'une base de données
+* d'une base de données  
 ...
 
 ## Découpage des tâches
