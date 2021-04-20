@@ -32,17 +32,30 @@ Nécessite l'utilisation :
 
 Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des informations de météo sur le lieu de vacances)  
 
-## Découpage des tâches
+## Pourquoi xamarin ?
+-> Why did you choose Xamarin technology? Explain in readme the advantages and disadvantages of Cross platform development according to lesson 1 and 2,  
+comparing to natif and others cross platform solutions (Open GL ES, Web View).  
+
+
+### avantages d'un dev cross plateforme xamarin
+
+
+
+### inconvénients d'un dev cross plateforme xamarin
+
+
+
+## Tâches
 
 * structure -> MVVM
 * menu = nav par onglets en bas
-   * Page accueil
-   * Page détails infos lieu choisi
-   * Liste favoris
-* Liste des favoris  
-   * Système de mise en favoris
-* Liste des lieux  
-   * Au clic sur lieu -> envoi sur la page du lieu pour voir les détails du lieu (infos, temps, photos,...)
+* Listes : 
+   * favoris  
+     * Système de mise en favoris
+   * lieux  
+     * Au clic sur lieu -> envoi sur la page du lieu pour voir les détails du lieu (infos, temps, photos,...)
+   * users
+     * plusieurs utilisateurs 
 * Connexion à l'API météo OpenWeatherMap
    * Création d'une fonction d'appel à l'API
    * Connexion avec le front
@@ -50,21 +63,63 @@ Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des inf
    * Récupération de la météo du lieu sur qq jours -> icônes
 * Persistance des données
 * Système de notation du lieu -> par étoiles
+* Possibilité pour l'utilisateur de rajouter des lieux => save ds bdd
+* Page de login
+* Page de profil user ???
 * Serveur => MongoDb
-* API maison
+* API maison A VOIR
 * Création partie user sur page accueil -> nom + img profil + img de couverture
 * "Caroussel" img de lieu -> 3 img max avec flèches droite-gauche 
 * Recherches pour remplissage infos des lieux 
    * img du lieu
-   * 3 img max des lieux à voir ds le lieu
+   * 3 img max des lieux à voir ds le lieu (caroussel)
    * Nom du lieu
    * différentes infos diverses sur lieu 
 * PowerPoint présentation projet
 * Vidéo de présentation de l'application + démo de l'app 
 * ...
 
+## Pages
 
-## ScreenShot de l'application
+### Page login
+
+pseudo  
+mdp  
+mdp oublié ???  
+
+### Page accueil
+
+* infos user :
+  * nom/pseudo
+  * img profil
+  * img couv
+* liste de lieux
+* possibilité de voir les profils des autres utilisateurs
+
+### Page détails du lieu
+
+photos  
+temps => température, icône du tps  
+texte descriptif du lieu  
+possibilité de mettre en favoris  
+possibilité de noter le lieu  
+
+### Page favoris
+
+liste des lieux mis en favoris => possibilité de retirer un lieu des favoris
+
+### Page user ????
+
+pr que l'utilisateur ai une page profil user à voir  
+
+### Barre de nav
+
+Page accueil  
+Page détails du lieu  
+Page favoris  
+btn déco
+
+## Maquette
 
 ...
 
@@ -86,6 +141,7 @@ Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des inf
 * Liste de favoris
    * Possibilité de supprimer lieu
 * Afficher élément au clic
+* liste de user
 * PowerPoint présentation projet
 * ...
 
@@ -114,9 +170,13 @@ Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des inf
    * Page détails infos lieu choisi
    * Liste favoris
 * Remplissage du ReadMe
+* Maquette
 * PowerPoint présentation projet
 * ...
 
-## Pourquoi xamarin ?
-### avantages
-### inconvénients
+## Ressources
+
+API météo
+https://openweathermap.org
+
+## ...
