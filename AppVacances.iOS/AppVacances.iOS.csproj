@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB29D58F-2003-45FB-9862-DEE5EF2268A5}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AppVacances.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>AppVacances.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchInterpreter>-all</MtouchInterpreter>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\athenes1.imageset\athenes1.jpg" />
+    <ImageAsset Include="Assets.xcassets\athenes1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\athenes2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\athenes2.imageset\athenes2.jpg" />
+    <ImageAsset Include="Assets.xcassets\athenes3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\athenes3.imageset\athenes3.jpg" />
+    <ImageAsset Include="Assets.xcassets\athenes4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\athenes4.imageset\athenes4.jpg" />
+    <ImageAsset Include="Assets.xcassets\rome1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rome1.imageset\rome1.jpg" />
+    <ImageAsset Include="Assets.xcassets\rome2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rome2.imageset\rome2.jpg" />
+    <ImageAsset Include="Assets.xcassets\rome3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rome3.imageset\rome3.jpg" />
+    <ImageAsset Include="Assets.xcassets\rome4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\rome4.imageset\rome4.jpg" />
+    <ImageAsset Include="Assets.xcassets\honolulu1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\honolulu2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\honolulu3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\honolulu4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lisbonne1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lisbonne2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lisbonne3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\lisbonne4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\londres1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\londres2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\londres3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\londres4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\madrid1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\madrid2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\madrid3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\madrid4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\newyork1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\newyork2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\newyork3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\newyork4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\paris1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\paris2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\paris3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\paris4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tokyo1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tokyo2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tokyo3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\tokyo4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\singapour1.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\singapour2.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\singapour3.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\singapour4.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\honolulu1.imageset\honolulu1.jpg" />
+    <ImageAsset Include="Assets.xcassets\honolulu2.imageset\honolulu2.jpg" />
+    <ImageAsset Include="Assets.xcassets\honolulu3.imageset\honolulu3.jpg" />
+    <ImageAsset Include="Assets.xcassets\honolulu4.imageset\honolulu4.jpg" />
+    <ImageAsset Include="Assets.xcassets\lisbonne1.imageset\lisbonne1.jpg" />
+    <ImageAsset Include="Assets.xcassets\lisbonne2.imageset\lisbonne2.jpg" />
+    <ImageAsset Include="Assets.xcassets\lisbonne3.imageset\lisbonne3.jpg" />
+    <ImageAsset Include="Assets.xcassets\lisbonne4.imageset\lisbonne4.jpg" />
+    <ImageAsset Include="Assets.xcassets\londres1.imageset\londres1.jpg" />
+    <ImageAsset Include="Assets.xcassets\londres2.imageset\londres2.jpg" />
+    <ImageAsset Include="Assets.xcassets\londres3.imageset\londres3.jpg" />
+    <ImageAsset Include="Assets.xcassets\londres4.imageset\londres4.jpg" />
+    <ImageAsset Include="Assets.xcassets\madrid1.imageset\madrid1.jpg" />
+    <ImageAsset Include="Assets.xcassets\madrid2.imageset\madrid2.jpg" />
+    <ImageAsset Include="Assets.xcassets\madrid3.imageset\madrid3.jpg" />
+    <ImageAsset Include="Assets.xcassets\madrid4.imageset\madrid4.jpg" />
+    <ImageAsset Include="Assets.xcassets\newyork1.imageset\newyork1.jpg" />
+    <ImageAsset Include="Assets.xcassets\newyork2.imageset\newyork2.jpg" />
+    <ImageAsset Include="Assets.xcassets\newyork3.imageset\newyork3.jpg" />
+    <ImageAsset Include="Assets.xcassets\newyork4.imageset\newyork4.jpg" />
+    <ImageAsset Include="Assets.xcassets\paris1.imageset\paris1.jpg" />
+    <ImageAsset Include="Assets.xcassets\paris2.imageset\paris2.jpg" />
+    <ImageAsset Include="Assets.xcassets\paris3.imageset\paris3.jpg" />
+    <ImageAsset Include="Assets.xcassets\paris4.imageset\paris4.jpg" />
+    <ImageAsset Include="Assets.xcassets\tokyo1.imageset\tokyo1.jpg" />
+    <ImageAsset Include="Assets.xcassets\tokyo2.imageset\tokyo2.jpg" />
+    <ImageAsset Include="Assets.xcassets\tokyo3.imageset\tokyo3.jpg" />
+    <ImageAsset Include="Assets.xcassets\tokyo4.imageset\tokyo4.jpg" />
+    <ImageAsset Include="Assets.xcassets\singapour1.imageset\singapour1.jpg" />
+    <ImageAsset Include="Assets.xcassets\singapour2.imageset\singapour2.jpg" />
+    <ImageAsset Include="Assets.xcassets\singapour3.imageset\singapour3.jpg" />
+    <ImageAsset Include="Assets.xcassets\singapour4.imageset\singapour4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\AppVacances\AppVacances.csproj">
+      <Project>{EB01BA95-FC14-4316-8BDC-645B460D9D4E}</Project>
+      <Name>AppVacances</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\athenes1.imageset\" />
+    <Folder Include="Assets.xcassets\athenes2.imageset\" />
+    <Folder Include="Assets.xcassets\athenes3.imageset\" />
+    <Folder Include="Assets.xcassets\athenes4.imageset\" />
+    <Folder Include="Assets.xcassets\rome1.imageset\" />
+    <Folder Include="Assets.xcassets\rome2.imageset\" />
+    <Folder Include="Assets.xcassets\rome3.imageset\" />
+    <Folder Include="Assets.xcassets\rome4.imageset\" />
+    <Folder Include="Assets.xcassets\honolulu1.imageset\" />
+    <Folder Include="Assets.xcassets\honolulu2.imageset\" />
+    <Folder Include="Assets.xcassets\honolulu3.imageset\" />
+    <Folder Include="Assets.xcassets\honolulu4.imageset\" />
+    <Folder Include="Assets.xcassets\lisbonne1.imageset\" />
+    <Folder Include="Assets.xcassets\lisbonne2.imageset\" />
+    <Folder Include="Assets.xcassets\lisbonne3.imageset\" />
+    <Folder Include="Assets.xcassets\lisbonne4.imageset\" />
+    <Folder Include="Assets.xcassets\londres1.imageset\" />
+    <Folder Include="Assets.xcassets\londres2.imageset\" />
+    <Folder Include="Assets.xcassets\londres3.imageset\" />
+    <Folder Include="Assets.xcassets\londres4.imageset\" />
+    <Folder Include="Assets.xcassets\madrid1.imageset\" />
+    <Folder Include="Assets.xcassets\madrid2.imageset\" />
+    <Folder Include="Assets.xcassets\madrid3.imageset\" />
+    <Folder Include="Assets.xcassets\madrid4.imageset\" />
+    <Folder Include="Assets.xcassets\newyork1.imageset\" />
+    <Folder Include="Assets.xcassets\newyork2.imageset\" />
+    <Folder Include="Assets.xcassets\newyork3.imageset\" />
+    <Folder Include="Assets.xcassets\newyork4.imageset\" />
+    <Folder Include="Assets.xcassets\paris1.imageset\" />
+    <Folder Include="Assets.xcassets\paris2.imageset\" />
+    <Folder Include="Assets.xcassets\paris3.imageset\" />
+    <Folder Include="Assets.xcassets\paris4.imageset\" />
+    <Folder Include="Assets.xcassets\tokyo1.imageset\" />
+    <Folder Include="Assets.xcassets\tokyo2.imageset\" />
+    <Folder Include="Assets.xcassets\tokyo3.imageset\" />
+    <Folder Include="Assets.xcassets\tokyo4.imageset\" />
+    <Folder Include="Assets.xcassets\singapour1.imageset\" />
+    <Folder Include="Assets.xcassets\singapour2.imageset\" />
+    <Folder Include="Assets.xcassets\singapour3.imageset\" />
+    <Folder Include="Assets.xcassets\singapour4.imageset\" />
+  </ItemGroup>
+</Project>
