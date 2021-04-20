@@ -64,7 +64,7 @@ Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des inf
 * ...
 
 
-## Maquette
+## ScreenShot de l'application
 
 ...
 
@@ -115,7 +115,8 @@ Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des inf
    * Liste favoris
 * Remplissage du ReadMe
 * PowerPoint présentation projet
-* Maquette
 * ...
 
-## ...
+## Pourquoi xamarin ?
+### avantages
+### inconvénients
