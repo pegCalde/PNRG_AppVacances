@@ -33,16 +33,27 @@ Nécessite l'utilisation :
 Utilisation d’une API externe pour la météo : OpenWeatherMap (donner des informations de météo sur le lieu de vacances)  
 
 ## Pourquoi xamarin ?
--> Why did you choose Xamarin technology? Explain in readme the advantages and disadvantages of Cross platform development according to lesson 1 and 2,  
-comparing to natif and others cross platform solutions (Open GL ES, Web View).  
+
+Xamarin est 100% plateformes mobiles et ne necessite pas d'apprendre un langage spécifique à chaque OS mobile. Ca permet d’écrire du code autant pour iOS que pour Android ou Windows mobile avec un seul langage (le c#).  
+Comme nous avions un peu plus d'expérience avec ce langage (c#) et ce framework (xamarin) par rapport à d'autres, nous avons préféré approfondir ces connaissances plutôt que de  
+repartir sur une technologie et un langage que nous maitrisions moins parce que peu de connaissances.  
+Notre application n'ayant pas de graphique lourd, xamarin était un bon choix également pour cette raison.  
 
 
 ### avantages d'un dev cross plateforme xamarin
 
+app native permet dev seulement sur son périphérique dédié. un android ne fonctionnera pas sur ios et inversement.
+Les applications hybrides représente le premier pas vers l’universalité. Reprenons notre métaphore précédente et imaginons maintenant que nos deux personnes qui souhaitent communiquer ne soient pas originaires du même pays : elles devront donc utiliser pour se comprendre une langue commune voire universelle comme l’anglais.
+Pour les applications mobiles, c’est sensiblement la même chose et les développeurs utilisent pour cela des langages issus du web comme HTML, CSS, Javascript ou d’autres. L’exemple le plus connu est sans doute Phone Gap.
+Le troisième type d’application que l’on peut rencontrer sont les applications Cross-platform. Cela signifie qu’un même code est capable de fonctionner sur la majorité des systèmes d’exploitations connus. Pour cela, l’idée est d’écrire dans un langage unique qui est ensuite compiler dans une forme native à la plateforme cible. L’exemple le plus connu pour ce type d’application est Xamarin.
 
 
 ### inconvénients d'un dev cross plateforme xamarin
 
+ Il peut être compliqué d'utiliser toutes les bibliothèques open-source. Bien que Xamarin prenne en charge la plupart des bibliothèques .Net, il ne prend pas en charge toutes les bibliothèques tierces disponibles pour Android et iOS sans wrappers spécifiques.
+ Ne convient pas aux applications avec graphiques lourds. Chaque plate-forme a une méthode différente pour la disposition visuelle des écrans:
+ Si l'application a une UX / UI riche , il doit être implémenté de manière native.
+ Taille de l'application plus grande . Xamarin ajoute 3 à 5 mégaoctets pour la version et environ 20 mégaoctets pour les versions de débogage.
 
 
 ## Tâches
@@ -170,13 +181,15 @@ btn déco
    * Page détails infos lieu choisi
    * Liste favoris
 * Remplissage du ReadMe
-* Maquette
 * PowerPoint présentation projet
 * ...
 
 ## Ressources
 
-API météo
+API météo  
 https://openweathermap.org
+
+Naming convention  
+https://gitlab.com/chillcoding-at-the-beach/kotlin-for-android/-/wikis/Naming-Convention
 
 ## ...
