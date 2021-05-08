@@ -115,7 +115,7 @@ liste des lieux mis en favoris => possibilité de retirer un lieu des favoris
 
 ### Page user ????
 
-pr que l'utilisateur ai une page profil user à voir  
+pr que l'utilisateur ait une page profil user à voir  
 
 ### Barre de nav
 
