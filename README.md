@@ -170,7 +170,7 @@ btn déco
    * 3 img max des lieux à voir ds le lieu
    * Nom du lieu
    * différentes infos diverses sur lieu 
-* menu = nav par onglets en bas
+* menu pr la nav
    * Page accueil
    * Page détails infos lieu choisi
    * Liste favoris
