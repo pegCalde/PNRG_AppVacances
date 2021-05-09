@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVacances.Views.EditUser">
+  <ContentView.Content>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="500"></RowDefinition>
+                    <RowDefinition Height="60"></RowDefinition>
+                </Grid.RowDefinitions>
+                <ScrollView Grid.Row="0" VerticalOptions="FillAndExpand">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <Label Grid.Row="0" Text="Nom*" />
+                        <Entry x:Name="nom" Grid.Row="1" Text="{Binding Username}"/>
+                        <Label Grid.Row="2" Text="Description*" />
+                        <Entry x:Name="desc" Grid.Row="3" Text="{Binding Description}"></Entry>
+                        <Label Grid.Row="4" Text="Date de naissance" />
+                        <Entry Grid.Row="5" Text="{Binding Date}"/>
+                        <Label Grid.Row="6" Text="Lieu de naissance" />
+                        <Entry Grid.Row="7" Text="{Binding Lieu}"/>
+                        <Label Grid.Row="8" Text="Photo de profile" />
+                        <Entry Grid.Row="9" Text="{Binding Photo}"/>
+                        <Label Grid.Row="10" Text="Arrière plan" />
+                        <Entry Grid.Row="11" Text="{Binding Background}"/>
+                    </Grid>
+                </ScrollView>
+                <Button Grid.Row="1" 
+                        Text="Enregistrer" 
+                        BackgroundColor="LightGreen"
+                        Command="{Binding SaveModifiedUser}" >
+                </Button>
+            </Grid>
+        </StackLayout>
+    </ContentView.Content>
+</ContentView>

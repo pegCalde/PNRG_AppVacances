@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVacances.Views.ListUser">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="70" />
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="0" x:Name="MyListView"
+            HorizontalOptions="FillAndExpand"
+            ItemsSource="{Binding Users}"
+            HasUnevenRows="True"
+            SelectedItem="{Binding UserSelected, Mode=TwoWay}">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Modifier"
+                                      Command="{Binding Path=BindingContext.EditCommand, Source={x:Reference Name=MyListView}}"
+                                      CommandParameter="{Binding .}"/>
+                            <MenuItem Text="Supprimer"
+                                      Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference Name=MyListView}}"
+                                      CommandParameter="{Binding .}" IsDestructive="True"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Padding="20">
+                            <Label Text="{Binding Username}" />
+                            <Label Text="{Binding Description}" />
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+
+        </ListView>
+        <Button Grid.Row="1" Margin="10" Text="Ajouter" BackgroundColor="LightGreen" HorizontalOptions="End" VerticalOptions="End" Command="{Binding AddUser}"></Button>
+    </Grid>
+</ContentView>

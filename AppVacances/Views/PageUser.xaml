@@ -1,0 +1,62 @@
+﻿?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppVacances.Views.PageUser">
+  <ContentView.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="AUTO" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="AUTO" />
+            </Grid.RowDefinitions>
+
+            <Image Source="{Binding Background}"  VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>
+            <!--<Image Source="https://www.proflowers.com/blog/wp-content/uploads/2019/08/mexican-flowers-hero.jpg" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>-->
+
+            <Frame CornerRadius="100" HorizontalOptions="Center" VerticalOptions="End" Padding="0" Margin="0,0,0,-50" HeightRequest="120" WidthRequest="120">
+                <!--<Image HorizontalOptions="Fill" VerticalOptions="Fill" Source="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510_1280.jpg" Aspect="AspectFill" />-->
+                <Image HorizontalOptions="Fill" VerticalOptions="Fill" Source="{Binding Photo}" Aspect="AspectFill" />
+            </Frame>
+
+            <StackLayout Grid.Row="1" HorizontalOptions="CenterAndExpand" Padding="0,50,0,00">
+                <Label Text="{Binding Username}" FontSize="Title" Padding="30,20,30,10" HorizontalOptions="Center"/>
+                <StackLayout BackgroundColor="Gray" HorizontalOptions="CenterAndExpand" Padding="170,0,170,00">
+                    <BoxView HeightRequest="0.40" Color="Gray" HorizontalOptions="FillAndExpand"></BoxView>
+                </StackLayout>
+            </StackLayout>
+
+            <Grid Grid.Row="1" ColumnSpacing="0" RowSpacing="0" Margin="0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0">
+                    <Label Text="Vues" HorizontalOptions="Center" FontSize="Medium"/>
+                    <Label x:Name="vue" Text="{Binding NbVue}" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+
+
+                <StackLayout Grid.Column="3">
+                    <Label Text="Partages" HorizontalOptions="Center" FontSize="Medium"/>
+                    <Label x:Name="share" Text="{Binding NbShare}" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
+
+            <StackLayout Grid.Row="3" Margin="20,20">
+                <Label Text="Informations" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding Date}" TextColor="Black" FontSize="Medium"/>
+                <Label Text="{Binding Lieu}" TextColor="Black" FontSize="Medium"/>
+                <Label Text="Description" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                <Label Text="{Binding Description}" TextColor="Black" FontSize="Medium" HorizontalOptions="End"/>
+
+            </StackLayout>
+
+            <Button Grid.Row="4" Text="Share my profile" TextTransform="Lowercase" BackgroundColor="CadetBlue" TextColor="White" Margin="20" VerticalOptions="End" Command="{Binding Button_Clicked}"/>
+
+        </Grid>
+    </ContentView.Content>
+</ContentView>
