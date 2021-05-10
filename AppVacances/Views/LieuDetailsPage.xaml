@@ -5,33 +5,44 @@
     xmlns:local="clr-namespace:AppVacances;assembly=AppVacances"
     x:Class="AppVacances.LieuDetailsPage">
     <ScrollView>
-        <Grid RowSpacing="0">
+        <Grid BackgroundColor="White" RowSpacing="0">
             <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="0.01*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="4*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
-                <Frame Grid.Row="0"  Padding="0" Margin="0">
-                    <Image Source="{Binding Img}" Aspect="AspectFill"/>
-                </Frame>
-            </Grid>
-            <Grid Grid.Row="1">
-                <Label Text="{Binding Nom}" FontSize="40" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center"/>
-                <ImageButton x:Name="favori" HeightRequest="25" WidthRequest="25" HorizontalOptions="End" VerticalOptions="Center" Source="{Binding FavIcon}" Command="{Binding manageFavoriCommand}" BackgroundColor="White"/>
-            </Grid>
-
-            <StackLayout Grid.Row="2" Margin="10,10,10,0" Padding="10">
-                <Grid Margin="10">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Text="{Binding Température, StringFormat='Température: {0}'}" FontSize="20" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Start"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Frame Grid.Row="0"  Padding="0" Margin="0">
+                        <Image Source="{Binding Img}" Aspect="AspectFill"/>
+                    </Frame>
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                    <Label Grid.Row="1" Text="{Binding Nom}" FontSize="40" FontAttributes="Bold" TextColor="Black" HorizontalOptions="Center" VerticalOptions="End"/>
+                    <ImageButton Grid.Row="1" x:Name="favori" HeightRequest="25" WidthRequest="25" HorizontalOptions="End" Source="{Binding FavIcon}" Command="{Binding manageFavoriCommand}" BackgroundColor="White"/>
                 </Grid>
-                <Label Grid.Column="0" Text="Description" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                <Label Text="{Binding Description}" FontSize="18" HorizontalTextAlignment="Start" TextColor="Black"/>
-            </StackLayout>
+            </Grid>
+            <BoxView Grid.Row="1" HeightRequest="1" BackgroundColor="Gray" HorizontalOptions="FillAndExpand" Margin="18,0,18,0"/>
+            <Frame Grid.Row="3" Margin="0">
+                <StackLayout>
+                    <Label Text="Description" FontSize="18" FontAttributes="Bold" TextColor="Black"/>
+                    <Label Text="{Binding Description}" FontSize="18" HorizontalTextAlignment="End" TextColor="Black"/>
+                </StackLayout>
+            </Frame>
         </Grid>
     </ScrollView>
 </ContentPage>

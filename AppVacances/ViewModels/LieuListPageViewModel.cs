@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AppVacances
@@ -137,45 +138,20 @@ namespace AppVacances
                 IcôneMétéo = "soleil.jpg"
             });
 
+            for (int i = 0; i < lieux.Count; i++)
+            {
+                if (Preferences.ContainsKey(lieux[i].Nom))
+                {
+                    lieux[i].EstFav = Preferences.Get(lieux[i].Nom, false);
+                }
+            }
+
         }
 
         public LieuListPageViewModel(ObservableCollection<Lieu> newLieux)
         {
             Lieux = newLieux;
         }
- 
-
-       
-
-        public ICommand OnButtonShowClickedCommand
-        {
-            get
-            {
-                return new Command(ButtonShowClickedCommand);
-            }
-        }
-
-        void ButtonShowClickedCommand()
-        {
-            if (LieuSelected != null)
-            {
-                Application.Current.MainPage.Navigation.PushAsync(new LieuDetailsPage(LieuSelected));
-            }
-            else
-            {
-                Device.BeginInvokeOnMainThread(async () =>
-                {
-                    await Application.Current.MainPage.DisplayAlert("Information", "Veuillez sélectionner un lieu avant d'appuyer sur ce bouton !", "OK");
-                    LieuSelected = null;
-                });
-            }
-
-        }
-
-      
-       
-       
-        
 
         public Lieu LieuSelected
         {
@@ -187,7 +163,39 @@ namespace AppVacances
             {
 
                 SetProperty(ref lieuSelected, value);
+
+                if (LieuSelected != null)
+                {
+                    Application.Current.MainPage.Navigation.PushAsync(new LieuDetailsPage(LieuSelected));
+                    LieuSelected = null;
+                }
             }
+        }
+
+
+        public ICommand goToFavoriCommand
+        {
+            get
+            {
+                return new Command(goToFavori);
+            }
+        }
+
+        public void goToFavori()
+        {
+            ObservableCollection<Lieu> favoris = new ObservableCollection<Lieu>();
+            for (int i = 0; i < lieux.Count; i++)
+            {
+                if (Preferences.ContainsKey(lieux[i].Nom))
+                {
+                    if (Preferences.Get(lieux[i].Nom, false) == true)
+                    {
+                        favoris.Add(lieux[i]);
+                    }
+                }
+            }
+
+            Application.Current.MainPage.Navigation.PushAsync(new FavoriListPage(favoris));
         }
 
     }
