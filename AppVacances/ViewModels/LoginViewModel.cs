@@ -1,14 +1,14 @@
-﻿using System;  
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using AppVacances.Models;
 using AppVacances.Service;
 using Newtonsoft.Json;
-using Xamarin.Forms; 
+using Xamarin.Forms;
 
 namespace AppVacances
 {
@@ -17,6 +17,7 @@ namespace AppVacances
         public Action DisplayInvalidLoginPrompt;   
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
         private string username;
+        private PnrgApiResponse.UtilisateurObject user;
         
         public string Username
         {  
@@ -44,18 +45,12 @@ namespace AppVacances
 
         public LoginViewModel()  
         {  
-            SubmitCommand = new Command(OnSubmit);  
+            SubmitCommand = new Command(OnSubmit);
         }
         
         public async void OnSubmit()  
-        {  
-            if (username == "example" || password == "secret")  
-            {  
-                DisplayInvalidLoginPrompt();  
-            } else
-            {
-                await Login();
-            } 
+        {
+            await Login();            
         }
 
         
@@ -88,9 +83,17 @@ namespace AppVacances
             {
                 var data = await result.Content.ReadAsStringAsync();
 
-                var user = new Utilisateur()
+                user = JsonConvert.DeserializeObject<PnrgApiResponse.UtilisateurObject>(data);
+
+                Device.BeginInvokeOnMainThread(async () => {
+                    await Application.Current.MainPage.Navigation.PushAsync(new LieuListPage());
+                    IsBusy = false;
+
+                });
                 
             }
+
+            IsBusy = false;
         }
     }  
 }

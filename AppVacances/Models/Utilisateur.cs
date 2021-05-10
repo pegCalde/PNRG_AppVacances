@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace AppVacances.Models
+namespace AppVacances
 {
     public class Utilisateur
     {

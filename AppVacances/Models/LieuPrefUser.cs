@@ -1,5 +1,5 @@
 ﻿using System;
-namespace AppVacances.Models
+namespace AppVacances
 {
     public class LieuPrefUser
     {

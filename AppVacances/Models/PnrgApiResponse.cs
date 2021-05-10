@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace AppVacances.Models
+namespace AppVacances
 {
-    public class PNRG_API_Response
+    public class PnrgApiResponse
     {
         public partial class LieuPrefUser
         {
@@ -53,8 +53,8 @@ namespace AppVacances.Models
                 set;
             }
 
-            [JsonProperty("listeLieuPrefUser")]
-            public List<LieuPrefUser> ListeLieuPrefUser
+            [JsonProperty("listLieuPrefUser")]
+            public List<LieuPrefUser> ListLieuPrefUser
             {
                 get;
                 set;

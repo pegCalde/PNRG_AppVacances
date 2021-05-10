@@ -25,5 +25,12 @@ namespace AppVacances
                 vm.SubmitCommand.Execute(null);
             };
         }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+            Navigation.RemovePage(this);
+        }
     }
 }
