@@ -10,7 +10,7 @@ namespace AppVacances
         public LieuDetailsPage(Lieu lieu)
         {
             InitializeComponent();
-            BindingContext = new LieuDetailsPageViewModel();
+            BindingContext = new LieuDetailsPageViewModel(lieu);
         }
     }
 }
