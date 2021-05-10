@@ -132,7 +132,7 @@ Les login sont :
 ![login](https://user-images.githubusercontent.com/50577515/117687163-ceb48280-b1b7-11eb-9d75-0e99f6be00fd.png)
 ![pageAccueil-listeLieuxAvisiter](https://user-images.githubusercontent.com/50577515/117687688-500c1500-b1b8-11eb-8647-400de76ad6ea.png)  
 ![listeFavoris](https://user-images.githubusercontent.com/50577515/117688028-b002bb80-b1b8-11eb-89e0-da5c2edc7f5d.png)
-
+![detailLieu](https://user-images.githubusercontent.com/50577515/117694616-a2046900-b1bf-11eb-859d-85b6a651e705.png)  
 
 
 ## Répartition
