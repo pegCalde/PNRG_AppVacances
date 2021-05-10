@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xf:BottomBarPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:xf="clr-namespace:BottomBar.XamarinForms"
+                  xmlns:local="clr-namespace:AppVacances.Views" 
+                  xmlns:local1="clr-namespace:AppVacances"
+                  x:Class="AppVacances.Views.MainMenuPage">
+    
+    <local:UserListPage Title="Utilisateurs"
+                         Icon="ic_friends.png" />
+
+    <local1:LieuListPage Title="Lieux"
+                         Icon="ic_nearby.png" 
+                 xf:BottomBarPageExtensions.TabColor="#FF9800"/>
+
+    <local:UserPage Title="Mon profile"
+                       Icon="ic_favorites.png"
+                 xf:BottomBarPageExtensions.TabColor="#7B1FA2"  />
+
+
+</xf:BottomBarPage>

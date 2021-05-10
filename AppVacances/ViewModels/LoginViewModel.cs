@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using AppVacances.Service;
+using AppVacances.Views;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 
@@ -86,7 +87,7 @@ namespace AppVacances
                 user = JsonConvert.DeserializeObject<PnrgApiResponse.UtilisateurObject>(data);
 
                 Device.BeginInvokeOnMainThread(async () => {
-                    await Application.Current.MainPage.Navigation.PushAsync(new LieuListPage());
+                    await Application.Current.MainPage.Navigation.PushAsync(new MainMenuPage());
                     IsBusy = false;
 
                 });

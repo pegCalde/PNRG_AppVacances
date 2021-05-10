@@ -1,5 +1,4 @@
-﻿using AppVacances.Models;
-using AppVacances.ViewModels;
+﻿using BottomBar.XamarinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,14 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace AppVacances.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class UserPage : ContentPage
+    public partial class MainMenuPage : BottomBarPage
     {
-        public UserPage(User user)
-        {
-            InitializeComponent();
-            BindingContext = new PageUserViewModel(user);
-        }
-        public UserPage()
+        public MainMenuPage()
         {
             InitializeComponent();
         }
