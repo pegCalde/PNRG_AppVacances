@@ -70,7 +70,7 @@ Par rapport aux app native qui permettent de développer sur un périphérique d
 * Système de notation du lieu -> par étoiles
 * Possibilité pour l'utilisateur de rajouter des lieux => save ds bdd
 * Page de login
-* Page de profil user ???
+* Page de profil user SI ON A LE TEMPS  
 * Serveur => MongoDb
 * API maison A VOIR
 * Création partie user sur page accueil -> nom + img profil + img de couverture
@@ -90,7 +90,7 @@ Par rapport aux app native qui permettent de développer sur un périphérique d
 
 pseudo  
 mdp  
-mdp oublié ???  
+mdp oublié SI ON A LE TEMPS  
 
 ### Page accueil
 
@@ -113,7 +113,7 @@ possibilité de noter le lieu
 
 liste des lieux mis en favoris => possibilité de retirer un lieu des favoris
 
-### Page user ????
+### Page user SI ON A LE TEMPS
 
 pr que l'utilisateur ait une page profil user à voir  
 
