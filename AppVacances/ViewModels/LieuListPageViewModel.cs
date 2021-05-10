@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace AppVacances
@@ -34,7 +35,7 @@ namespace AppVacances
                 Imgs = new string[] { "rome1.jpg", "rome2.jpg", "rome3.jpg", "rome4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -45,7 +46,7 @@ namespace AppVacances
                 Imgs = new string[] { "madrid1.jpg", "madrid2.jpg", "madrid3.jpg", "madrid4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -56,7 +57,7 @@ namespace AppVacances
                 Imgs = new string[] { "athenes1.jpg", "athenes2.jpg", "athenes3.jpg", "athenes4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -67,7 +68,7 @@ namespace AppVacances
                 Imgs = new string[] { "londres1.jpg", "londres2.jpg", "londres3.jpg", "londres4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -78,7 +79,7 @@ namespace AppVacances
                 Imgs = new string[] { "lisbonne1.jpg", "lisbonne2.jpg", "lisbonne3.jpg", "lisbonne4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -89,7 +90,7 @@ namespace AppVacances
                 Imgs = new string[] { "paris1.jpg", "paris2.jpg", "paris3.jpg", "paris4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -100,7 +101,7 @@ namespace AppVacances
                 Imgs = new string[] { "honolulu1.jpg", "honolulu2.jpg", "honolulu3.jpg", "honolulu4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -111,7 +112,7 @@ namespace AppVacances
                 Imgs = new string[] { "singapour1.jpg", "singapour2.jpg", "singapour3.jpg", "singapour4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -122,7 +123,7 @@ namespace AppVacances
                 Imgs = new string[] { "tokyo1.jpg", "tokyo2.jpg", "tokyo3.jpg", "tokyo4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
             Lieux.Add(new Lieu
@@ -133,9 +134,17 @@ namespace AppVacances
                 Imgs = new string[] { "newyork1.jpg", "newyork2.jpg", "newyork3.jpg", "newyork4.jpg" },
                 EstFav = false,
                 Notation = 0,
-                Température = 20,
+                Température = "",
                 IcôneMétéo = "soleil.jpg"
             });
+
+            for (int i = 0; i < lieux.Count; i++)
+            {
+                if (Preferences.ContainsKey(lieux[i].Nom))
+                {
+                    lieux[i].EstFav = Preferences.Get(lieux[i].Nom, false);
+                }
+            }
 
         }
 
@@ -143,39 +152,6 @@ namespace AppVacances
         {
             Lieux = newLieux;
         }
- 
-
-       
-
-        public ICommand OnButtonShowClickedCommand
-        {
-            get
-            {
-                return new Command(ButtonShowClickedCommand);
-            }
-        }
-
-        void ButtonShowClickedCommand()
-        {
-            if (LieuSelected != null)
-            {
-                Application.Current.MainPage.Navigation.PushAsync(new LieuDetailsPage(LieuSelected));
-            }
-            else
-            {
-                Device.BeginInvokeOnMainThread(async () =>
-                {
-                    await Application.Current.MainPage.DisplayAlert("Information", "Veuillez sélectionner un lieu avant d'appuyer sur ce bouton !", "OK");
-                    LieuSelected = null;
-                });
-            }
-
-        }
-
-      
-       
-       
-        
 
         public Lieu LieuSelected
         {
@@ -187,7 +163,39 @@ namespace AppVacances
             {
 
                 SetProperty(ref lieuSelected, value);
+
+                if (LieuSelected != null)
+                {
+                    Application.Current.MainPage.Navigation.PushAsync(new LieuDetailsPage(LieuSelected));
+                    LieuSelected = null;
+                }
             }
+        }
+
+
+        public ICommand goToFavoriCommand
+        {
+            get
+            {
+                return new Command(goToFavori);
+            }
+        }
+
+        public void goToFavori()
+        {
+            ObservableCollection<Lieu> favoris = new ObservableCollection<Lieu>();
+            for (int i = 0; i < lieux.Count; i++)
+            {
+                if (Preferences.ContainsKey(lieux[i].Nom))
+                {
+                    if (Preferences.Get(lieux[i].Nom, false) == true)
+                    {
+                        favoris.Add(lieux[i]);
+                    }
+                }
+            }
+
+            Application.Current.MainPage.Navigation.PushAsync(new FavoriListPage(favoris));
         }
 
     }

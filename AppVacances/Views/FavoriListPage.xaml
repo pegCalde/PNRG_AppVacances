@@ -17,19 +17,19 @@
                       VerticalOptions="FillAndExpand"
                       HasUnevenRows="True">
                 <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem Text="Supprimer"
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem Text="Supprimer"
                                               Command="{Binding Path=BindingContext.DeleteCommand, Source={x:Reference Name=FavorisList}}"
                                               CommandParameter="{Binding .}" IsDestructive="True"/>
-                            </ViewCell.ContextActions>
-                            <StackLayout Padding="20">
-                                <Label Text="{Binding Nom}"/>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+                                </ViewCell.ContextActions>
+                                <StackLayout Padding="20">
+                                    <Label Text="{Binding Nom}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
             </ListView>
         </Grid>
     </ContentPage.Content>

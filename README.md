@@ -70,7 +70,7 @@ Par rapport aux app native qui permettent de développer sur un périphérique d
 * Système de notation du lieu -> par étoiles
 * Possibilité pour l'utilisateur de rajouter des lieux => save ds bdd
 * Page de login
-* Page de profil user ???
+* Page de profil user SI ON A LE TEMPS  
 * Serveur => MongoDb
 * API maison A VOIR
 * Création partie user sur page accueil -> nom + img profil + img de couverture
@@ -90,7 +90,7 @@ Par rapport aux app native qui permettent de développer sur un périphérique d
 
 pseudo  
 mdp  
-mdp oublié ???  
+mdp oublié SI ON A LE TEMPS  
 
 ### Page accueil
 
@@ -113,9 +113,9 @@ possibilité de noter le lieu
 
 liste des lieux mis en favoris => possibilité de retirer un lieu des favoris
 
-### Page user ????
+### Page user SI ON A LE TEMPS
 
-pr que l'utilisateur ai une page profil user à voir  
+pr que l'utilisateur ait une page profil user à voir  
 
 ### Barre de nav
 
@@ -126,7 +126,14 @@ btn déco
 
 ## Maquette
 
-...
+Les login sont :  
+ - username: testUsername  
+ - Password: testPassword  
+![login](https://user-images.githubusercontent.com/50577515/117687163-ceb48280-b1b7-11eb-9d75-0e99f6be00fd.png)
+![pageAccueil-listeLieuxAvisiter](https://user-images.githubusercontent.com/50577515/117687688-500c1500-b1b8-11eb-8647-400de76ad6ea.png)  
+![listeFavoris](https://user-images.githubusercontent.com/50577515/117688028-b002bb80-b1b8-11eb-89e0-da5c2edc7f5d.png)
+![detailLieu](https://user-images.githubusercontent.com/50577515/117694616-a2046900-b1bf-11eb-859d-85b6a651e705.png)  
+
 
 ## Répartition
 
@@ -170,7 +177,7 @@ btn déco
    * 3 img max des lieux à voir ds le lieu
    * Nom du lieu
    * différentes infos diverses sur lieu 
-* menu = nav par onglets en bas
+* menu pr la nav
    * Page accueil
    * Page détails infos lieu choisi
    * Liste favoris
