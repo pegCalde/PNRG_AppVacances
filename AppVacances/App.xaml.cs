@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppVacances.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace AppVacances
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LieuListPage());
+            MainPage = new NavigationPage(new UserListPage());
         }
 
         protected override void OnStart()

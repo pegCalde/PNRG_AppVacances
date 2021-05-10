@@ -1,8 +1,8 @@
-﻿?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppVacances.Views.PageUser">
-  <ContentView.Content>
+             x:Class="AppVacances.Views.UserPage">
+    <ContentPage.Content>
         <Grid ColumnSpacing="0" RowSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="AUTO" />
@@ -58,5 +58,5 @@
             <Button Grid.Row="4" Text="Share my profile" TextTransform="Lowercase" BackgroundColor="CadetBlue" TextColor="White" Margin="20" VerticalOptions="End" Command="{Binding Button_Clicked}"/>
 
         </Grid>
-    </ContentView.Content>
-</ContentView>
+    </ContentPage.Content>
+</ContentPage>

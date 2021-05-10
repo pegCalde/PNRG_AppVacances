@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppVacances.Views.ListUser">
+             x:Class="AppVacances.Views.UserListPage">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -37,4 +37,4 @@
         </ListView>
         <Button Grid.Row="1" Margin="10" Text="Ajouter" BackgroundColor="LightGreen" HorizontalOptions="End" VerticalOptions="End" Command="{Binding AddUser}"></Button>
     </Grid>
-</ContentView>
+</ContentPage>

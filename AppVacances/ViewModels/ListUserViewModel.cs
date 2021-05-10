@@ -78,7 +78,7 @@ namespace AppVacances.ViewModels
                 SetProperty(ref userSelected, value);
                 if (value != null)
                 {
-                    Application.Current.MainPage.Navigation.PushAsync(new PageUser(userSelected));
+                    Application.Current.MainPage.Navigation.PushAsync(new UserPage(userSelected));
                     UserSelected = null;
                 }
             }
@@ -94,7 +94,7 @@ namespace AppVacances.ViewModels
 
         async Task OnEditCommand(User theuser)
         {
-            await Application.Current.MainPage.Navigation.PushAsync(new EditUser(users, theuser));
+            await Application.Current.MainPage.Navigation.PushAsync(new EditUserPage(users, theuser));
 
         }
 
@@ -122,7 +122,7 @@ namespace AppVacances.ViewModels
 
         void OnAddUser()
         {
-            Application.Current.MainPage.Navigation.PushAsync(new NewProfile(users, new User()));
+            Application.Current.MainPage.Navigation.PushAsync(new NewUser(users, new User()));
         }
     }
 }

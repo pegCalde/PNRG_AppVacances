@@ -13,19 +13,12 @@ using Xamarin.Forms.Xaml;
 namespace AppVacances.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewProfile : ContentView
+    public partial class NewUser : ContentPage
     {
         public NewUser(ObservableCollection<User> users, User user)
         {
             InitializeComponent();
             BindingContext = new PageUserViewModel(users, user);
         }
-
-        //User newUser = new User();
-        //ProfileViewModel pvm = new ProfileViewModel(newUser);
-
-        public bool SaveAllowed =>
-    !string.IsNullOrEmpty(nom.Text) && !string.IsNullOrEmpty(desc.Text);
-
     }
 }

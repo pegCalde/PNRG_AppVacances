@@ -176,7 +176,7 @@ namespace AppVacances.ViewModels
                 Background = background
             });
 
-            Application.Current.MainPage.Navigation.PushAsync(new ListUser(Users));
+            Application.Current.MainPage.Navigation.PushAsync(new UserListPage(Users));
         }
 
         public ICommand SaveUser
@@ -200,7 +200,7 @@ namespace AppVacances.ViewModels
                 Background = background
             });
 
-            Application.Current.MainPage.Navigation.PushAsync(new ListUser(Users));
+            Application.Current.MainPage.Navigation.PushAsync(new UserListPage(Users));
         }
 
         public PageUserViewModel(User user)
