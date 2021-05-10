@@ -126,6 +126,9 @@ btn déco
 
 ## Maquette
 
+Les login sont :  
+ - username: testUsername  
+ - Password: testPassword  
 ![login](https://user-images.githubusercontent.com/50577515/117687163-ceb48280-b1b7-11eb-9d75-0e99f6be00fd.png)  
 ![pageAccueil-listeLieuxAvisiter](https://user-images.githubusercontent.com/50577515/117687688-500c1500-b1b8-11eb-8647-400de76ad6ea.png)  
 ![listeFavoris](https://user-images.githubusercontent.com/50577515/117688028-b002bb80-b1b8-11eb-89e0-da5c2edc7f5d.png)  
